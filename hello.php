@@ -33,3 +33,7 @@ if($marks>=60 && $marks<=80){
 else{
     echo "Failed";
 }
+
+$result=10 + 5  - 3 * 4;
+echo $result;
+?>
