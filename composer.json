@@ -1,0 +1,9 @@
+{
+	"require": {
+		"php": ">=5.3.7",
+		 "phpmailer/phpmailer":"v5.2.16",
+		"mpdf/mpdf": "^8.1",
+		"select2/select2": "^4.0",
+        "twbs/bootstrap": ">=5.3.1"
+	}
+}
