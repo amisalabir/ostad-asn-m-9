@@ -122,7 +122,7 @@
                         <ul>
                             <li><a class="dropdown-item"  href="assignment/asn-1/personal_info.php">Task 1: Personal Information Page</a></li>
                             <li><a class="dropdown-item"  href="assignment/asn-1/temperature_converter.php">Task 2: Temperature Converter</a></li>
-                            <li><a class="dropdown-item"  href="assignment/asn-1/">Task 3: Grade Calculator</a></li>
+                            <li><a class="dropdown-item"  href="assignment/asn-1/grade_calculator.php">Task 3: Grade Calculator</a></li>
                             <li><a class="dropdown-item"  href="assignment/asn-1/">Task 4: Even or Odd Checker</a></li>
                             <li><a class="dropdown-item"  href="assignment/asn-1/">Task 5: Weather Report</a></li>
                             <li><a class="dropdown-item"  href="assignment/asn-1/">Task 6: Comparison Tool</a></li>
