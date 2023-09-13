@@ -5,6 +5,7 @@
 	<title>OSTAD-WDPL</title>
 	<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
 	<style>
 	body{
 		font-family: "Trebuchet MS", sans-serif;
@@ -55,7 +56,7 @@
             <div class="row align-items-center">
                 <div class="col-md-12">
                     <div class="text-center">
-                    <h1>OSTAD - WDPL</h1>
+                    <h1>OSTAD-PHP Batch-2</h1>
                     </div>
                 </div>
             </div>
@@ -69,20 +70,83 @@
                 Course: Web Development with PHP & Laravel <br>
                Instructor: Hasin Hyder & Rabbil Hassan <br>
             </div>
-            <div class="col-md-6">
-             <img src="">       
+            <div class="col-md-6 text-center">
+             <img width="100px" class="img-circle" src="resources/img/kazi.jpg">       
+            </div>
+        </div>
+</div>
+<!--
+<div class="ui-widget">
+	<p>This page demonstrates the widgets and theme you selected in Download Builder. Please make sure you are using them with a compatible jQuery version.</p>
+</div>
+-->
+
+<!-- Tabs -->
+<div class="container">
+        <div class="row align-items-center">
+              <div class="col-md-12">
+              <h2 class="demoHeaders">Course Monograph</h2>
+            <div id="tabs">
+	        <ul>
+            <li><a href="#tabs-1">Module</a></li>
+            <li><a href="#tabs-2">Conceptual Class</a></li>
+            <li><a href="#tabs-3">Live Test</a></li>
+            <li><a href="#tabs-4">Quiz</a></li>
+            <li><a href="#tabs-5">Assignment</a></li>
+            <li><a href="#tabs-6">Project</a></li>
+	        </ul>
+            <div id="tabs-1" class="detailsTab">
+            <ul style="list-style-type: none">
+                    <li><a target="_blank"  href="module-live-class/class-1.php">Class - 1 :PHP Start With PHP & Visual Studio Code Power Uses</></li>
+            </ul> 
+            </div>
+            <div id="tabs-2" class="detailsTab">
+            <ul style="list-style-type: none">
+            <li><a target="_blank" href="conceptual/class-1">Class - 1 :Variables, constants,comments, printing, arithmetic operators, printf, conditionals, ternary operator</a></li>
+            <li><a target="_blank" href="conceptual/class-1/calculator">Class - 2 :Basic calculator project using php</a></li>
+            </ul> 
+            </div>
+            <div id="tabs-3" class="detailsTab">
+            <ul style="list-style-type: none">
+                    <li><a target="_blank" href="live-test/test-1.php">Test - 1 : 5 Tasks </a></li>
+            </ul> 
+            </div>
+            <div id="tabs-4" class="detailsTab">
+            <ul style="list-style-type: none">
+                    <li><a href="#tabs-1">Assignment - 1 :PHP Fundamentals Assignment</a></li>
+            </ul> 
+            </div>
+            <div id="tabs-5" class="detailsTab">
+                <ul  style="list-style-type: none">
+                    <li><a href="#tabs-1">Assignment - 1 :PHP Fundamentals Assignment</a>
+                        <ul>
+                            <li><a class="dropdown-item"  href="assignment/asn-1/personal_info.php">Task 1: Personal Information Page</a></li>
+                            <li><a class="dropdown-item"  href="#tabs-1">Task 2: Temperature Converter</a></li>
+                            <li><a class="dropdown-item"  href="#tabs-1">Task 3: Grade Calculator</a></li>
+                            <li><a class="dropdown-item"  href="#tabs-1">Task 4: Even or Odd Checker</a></li>
+                            <li><a class="dropdown-item"  href="#tabs-1">Task 5: Weather Report</a></li>
+                            <li><a class="dropdown-item"  href="#tabs-1">Task 6: Comparison Tool</a></li>
+                            <li><a class="dropdown-item"  href="#tabs-1">Task-7: Simple Calculator</a></li>
+                        </ul>
+                  </li>
+                  <li><a href="#tabs-1">Assignment - 2 :PHP Fundamentals Assignment</a></li>
+                </ul>
+            </div>
+            <div id="tabs-6" class="detailsTab">
+            <ul style="list-style-type: none">
+                    <li><a href="#tabs-1">Assignment - 1 :PHP Fundamentals Assignment</a></li>
+            </ul> 
+            </div>
+            </div>
             </div>
         </div>
 </div>
 
-<div class="ui-widget">
-	<p>This page demonstrates the widgets and theme you selected in Download Builder. Please make sure you are using them with a compatible jQuery version.</p>
-</div>
-
-<h1>YOUR COMPONENTS:</h1>
 
 <!-- Accordion -->
+<!--
 <h2 class="demoHeaders">Accordion</h2>
+<!--
 <div id="accordion">
 	<h3>First</h3>
 	<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
@@ -93,17 +157,20 @@
 </div>
 
 <!-- Autocomplete -->
+<!--
 <h2 class="demoHeaders">Autocomplete</h2>
 <div>
 	<input id="autocomplete" title="type &quot;a&quot;">
 </div>
 
 <!-- Button -->
+<!--
 <h2 class="demoHeaders">Button</h2>
 <button id="button">A button element</button>
 <button id="button-icon">An icon-only button</button>
 
 <!-- Checkboxradio -->
+<!--
 <h2 class="demoHeaders">Checkboxradio</h2>
 <form style="margin-top: 1em;">
 	<div id="radioset">
@@ -114,6 +181,7 @@
 </form>
 
 <!-- Controlgroup -->
+<!--
 <h2 class="demoHeaders">Controlgroup</h2>
 <fieldset>
 	<legend>Rental Car</legend>
@@ -139,19 +207,9 @@
 	</div>
 </fieldset>
 
-<!-- Tabs -->
-<h2 class="demoHeaders">Tabs</h2>
-<div id="tabs">
-	<ul>
-		<li><a href="#tabs-1">First</a></li>
-		<li><a href="#tabs-2">Second</a></li>
-		<li><a href="#tabs-3">Third</a></li>
-	</ul>
-	<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-	<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
-	<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
-</div>
 
+<!-- Dialog -->
+<!--
 <h2 class="demoHeaders">Dialog</h2>
 <p>
 	<button id="dialog-link" class="ui-button ui-corner-all ui-widget">
@@ -164,6 +222,7 @@
 	<p>Lorem ipsum dolor sit amet,  Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. </p><p>Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. </p><p>Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. </p><p>Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. Aliquam ante. </p><p>Suspendisse scelerisque dui nec velit. Duis augue augue, gravida euismod, vulputate ac, facilisis id, sem. Morbi in orci. Nulla purus lacus, pulvinar vel, malesuada ac, mattis nec, quam. Nam molestie scelerisque quam. Nullam feugiat cursus lacus.orem ipsum dolor sit amet, consectetur adipiscing elit. Donec libero risus, commodo vitae, pharetra mollis, posuere eu, pede. Nulla nec tortor. Donec id elit quis purus consectetur consequat. Nam congue semper tellus. Sed erat dolor, dapibus sit amet, venenatis ornare, ultrices ut, nisi. </p>
 
 	<!-- ui-dialog -->
+    <!--
 	<div class="ui-widget-overlay ui-front"></div>
 	<div style="position: absolute; width: 320px; left: 50px; top: 30px; padding: 1.2em" class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -172,6 +231,7 @@
 </div>
 
 <!-- ui-dialog -->
+<!--
 <div id="dialog" title="Dialog Title">
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
@@ -355,18 +415,22 @@
 </ul>
 
 <!-- Slider -->
+<!--
 <h2 class="demoHeaders">Slider</h2>
 <div id="slider"></div>
 
 <!-- Datepicker -->
+<!--
 <h2 class="demoHeaders">Datepicker</h2>
 <div id="datepicker"></div>
 
 <!-- Progressbar -->
+<!--
 <h2 class="demoHeaders">Progressbar</h2>
 <div id="progressbar"></div>
 
 <!-- Progressbar -->
+<!--
 <h2 class="demoHeaders">Selectmenu</h2>
 <select id="selectmenu">
 	<option>Slower</option>
@@ -377,10 +441,12 @@
 </select>
 
 <!-- Spinner -->
+<!--
 <h2 class="demoHeaders">Spinner</h2>
 <input id="spinner">
 
 <!-- Menu -->
+<!--
 <h2 class="demoHeaders">Menu</h2>
 <ul style="width:100px;" id="menu">
 	<li><div>Item 1</div></li>
@@ -399,6 +465,7 @@
 </ul>
 
 <!-- Tooltip -->
+<!--
 <h2 class="demoHeaders">Tooltip</h2>
 <p id="tooltip">
 	<a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
@@ -406,6 +473,7 @@ the element with your mouse, the title attribute is displayed in a little box ne
 </p>
 
 <!-- Highlight / Error -->
+<!--
 <h2 class="demoHeaders">Highlight / Error</h2>
 <div class="ui-widget">
 	<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
@@ -420,7 +488,7 @@ the element with your mouse, the title attribute is displayed in a little box ne
 		<strong>Alert:</strong> Sample ui-state-error style.</p>
 	</div>
 </div>
-
+-->
 <script src="jquery-ui/external/jquery/jquery.js"></script>
 <script src="jquery-ui/jquery-ui.js"></script>
 <script>

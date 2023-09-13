@@ -1,4 +1,5 @@
 
+
 <!--👇 Variables -->
 
 <!--✅ Example:1 -->
@@ -22,7 +23,7 @@ echo $boolVar . "<br>";  // Outputs 1 for true, nothing for false
 
 <!--✅ Example:2 -->
 
-<!-- <?php
+<?php
 $age = 25;         // Valid variable name
 $_username = "John"; // Valid variable name with underscore
 $myName123 = "Alice"; // Valid variable name with numbers
@@ -35,12 +36,12 @@ echo $age."<br>";
 echo $_username."<br>";
 echo $myName123."<br>";
 echo $my_var."<br>";
-?> -->
+?> 
 
 
 <!--✅ Example:3 -->
 
-<!-- <?php
+ <?php
 $globalVar = 100;     // Global variable
 
 function myFunction() {
@@ -54,7 +55,7 @@ function myFunction() {
 myFunction();
 // echo "Local Variable outside function: " . $localVar; // Error: $localVar is not accessible here
 echo "Global Variable outside function: " . $globalVar;
-?> -->
+?> 
 
 <!-- 👇👇 Constant -->
 
