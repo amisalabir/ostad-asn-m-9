@@ -123,10 +123,10 @@
                             <li><a class="dropdown-item"  href="assignment/asn-1/personal_info.php">Task 1: Personal Information Page</a></li>
                             <li><a class="dropdown-item"  href="assignment/asn-1/temperature_converter.php">Task 2: Temperature Converter</a></li>
                             <li><a class="dropdown-item"  href="assignment/asn-1/grade_calculator.php">Task 3: Grade Calculator</a></li>
-                            <li><a class="dropdown-item"  href="assignment/asn-1/">Task 4: Even or Odd Checker</a></li>
-                            <li><a class="dropdown-item"  href="assignment/asn-1/">Task 5: Weather Report</a></li>
-                            <li><a class="dropdown-item"  href="assignment/asn-1/">Task 6: Comparison Tool</a></li>
-                            <li><a class="dropdown-item"  href="assignment/asn-1/">Task-7: Simple Calculator</a></li>
+                            <li><a class="dropdown-item"  href="assignment/asn-1/even_odd_checker.php">Task 4: Even or Odd Checker</a></li>
+                            <li><a class="dropdown-item"  href="assignment/asn-1/weather_report.php">Task 5: Weather Report</a></li>
+                            <li><a class="dropdown-item"  href="assignment/asn-1/comparison_tool.php">Task 6: Comparison Tool</a></li>
+                            <li><a class="dropdown-item"  href="assignment/asn-1/simple_calculator.php">Task-7: Simple Calculator</a></li>
                         </ul>
                   </li>
                   <li><a href="#tabs-1">Assignment - 2 :PHP Fundamentals Assignment</a></li>

@@ -1,175 +1,113 @@
-<?php
-$currentValue = 0;
-
-$input = [];
-
-
-function getInputAsString($values){
-	$o = "";
-	foreach ($values as $value){
-		$o .= $value;
-	}
-	return $o;
-}
-
-
-function calculateInput($userInput){
-    // format user input
-    $arr = [];
-    $char = "";
-    foreach ($userInput as $num){
-        if(is_numeric($num) || $num == "."){
-            $char .= $num;
-        }else if(!is_numeric($num)){
-            if(!empty($char)){
-                $arr[] = $char;
-                $char = "";
-            }
-            $arr[] = $num;
-        }
-    }
-    if(!empty($char)){
-        $arr[] = $char;
-    }
-    // calculate user input
-
-    $current = 0;
-    $action = null;
-    for($i=0; $i<= count($arr)-1; $i++){
-        if(is_numeric($arr[$i])){
-            if($action){
-                if($action == "+"){
-                    $current = $current + $arr[$i];
-                }
-                if($action == "-"){
-                    $current = $current - $arr[$i];
-                }
-                if($action == "x"){
-                    $current = $current * $arr[$i];
-                }
-                if($action == "/"){
-                    $current = $current / $arr[$i];
-				}
-				if($action == "%"){
-                    $current = $current % $arr[$i];
-				}
-                $action = null;
-            }else{
-                if($current == 0){
-                    $current = $arr[$i];
-                }
-            }
-        }else{
-            $action = $arr[$i];
-        }
-    }
-    return $current;
-
-}
-
-$rep="";
-
-if($_SERVER['REQUEST_METHOD'] == "POST"){
-    if(isset($_POST['input'])){
-        $input = json_decode($_POST['input']);
-	}
-
-
-    if(isset($_POST)){
-		
-        foreach ($_POST as $key=>$value){
-			if($key == 'squareroot'){
-				$currentValue = sqrt(floatval(getInputAsString($input)));
-				$input = [];
-				$input[] = $currentValue;
-			 }
-			 elseif($key == 'square'){
-				$currentValue = pow(floatval(getInputAsString($input)),2);
-				$input = [];
-				$input[] = $currentValue;
-			 }
-            elseif($key == 'equal'){
-               $currentValue = calculateInput($input);
-               $input = [];
-               $input[] = $currentValue;
-            }elseif($key == "c"){
-                $input = [];
-                $currentValue = 0;
-            }elseif($key == "back"){
-                $lastPointer = count($input) -1;
-                if(is_numeric($input[$lastPointer])){
-                    array_pop($input);
-                }
-            }elseif($key != 'input'){
-                $input[] = $value;
-            }
-        }
-    }
-}
-?>
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="us">
 <head>
-    <meta charset="UTF-8">
-	<title>Simple Calculator</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-	<style>
-	.main {
-margin:10% auto;
-padding-left:40%;
-
-}
-	</style>
+	<meta charset="utf-8">
+	<title>Task 7: Simple Calculator</title>
+	<link href="../../jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
 </head>
 <body>
-	<div class="main">
 
+<div class="top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <div class="text-center">
+                    <u><h2>Simple Calculator</h2></u>
+					
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> 
+<hr>
+<div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4"></div>
 
-<h3>Simple Calculator</h3>
-<div style="border: 1px solid #ccc; border-radius: 3px; padding: 5px; display: inline-block">
-    <form method="post" id="form">
-	<input style="padding: 3px; margin: 0; min-height: 20px;" value="<?php echo getInputAsString($input);?>">
-    <input class="form-control" type="hidden" name="input" value='<?php echo json_encode($input);?>'/>
-	
-    <input class="form-control" type="text" value="<?php echo $currentValue;?>"/>
-    <table style="width:100%;">
-        <tr>
-            <td><input class="form-control" type="submit" name="c" value="C"/></td>
-            <td><button type="submit" name="modulus" value="%">&#37;</button></td>
-			<td><button type="submit" name="divide" value="/">&#247;</button></td>
-			<td><input class="form-control" type="submit" name="squareroot" value="√"/></td>
-        </tr>
-        <tr>
-            <td><input class="form-control" type="submit" name="7" value="7"/></td>
-            <td><input class="form-control" type="submit" name="8" value="8"/></td>
-			<td><input class="form-control" type="submit" name="9" value="9"/></td>
-			<td><input class="form-control" type="submit" name="square" value="^"/></td>
-        </tr>
-        <tr>
-            <td><input class="form-control" type="submit" name="4" value="4"/></td>
-            <td><input class="form-control" type="submit" name="5" value="5"/></td>
-            <td><input class="form-control" type="submit" name="6" value="6"/></td>        
-            <td><input class="form-control" type="submit" name="multiply" value="x"/></td>
-        </tr>
-        <tr>
-            <td><input class="form-control" type="submit" name="1" value="1"/></td>
-            <td><input class="form-control" type="submit" name="2" value="2"/></td>
-            <td><input class="form-control" type="submit" name="3" value="3"/></td>
-			<td><input class="form-control" type="submit" name="minus" value="-"/></td>
-        </tr>
-        <tr>
-            <!-- <td><button class="btn btn-primary" type="submit" name="plusminus" value="plusminus">&#177;</button></td> -->
-            <td><input class="form-control" type="submit" name="zero" value="0"/></td>
-            <td><input class="form-control" type="submit" name="." value="."/></td>
-			<td><input class="form-control" type="submit" name="equal" value="="/></td>
-			<td><input class="form-control" type="submit" name="add" value="+"/></td>
-        </tr>
-    </table>
-    </form>
-</div>
-</div>
+				<div class="col-md-4">
+                    <div class="text-left">
+
+                    <form method="post" action="">
+            <input class="form-control form-control-lg" type="number" name="num1" placeholder="Enter first number" required><br>
+            <input class="form-control form-control-lg" type="number" name="num2" placeholder="Enter second number" required><br>
+            <select class="form-control form-control-lg" name="operation">
+                <option value="add">Addition</option>
+                <option value="subtract">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="divide">Division</option>
+            </select><br>
+            <div class="text-center submit" id="">
+                        <button type="submit" class="btn btn-primary">Calculate</button>
+                    </div>
+                 </form>
+
+     
+            <?php
+            
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                echo " <div id=\"result\">";
+                $num1 = $_POST["num1"];
+                $num2 = $_POST["num2"];
+                $operation = $_POST["operation"];
+
+                switch ($operation) {
+                    case "add":
+                        $result = $num1 + $num2;
+                        echo "Result: $result";
+                        break;
+                    case "subtract":
+                        $result = $num1 - $num2;
+                        echo "Result: $result";
+                        break;
+                    case "multiply":
+                        $result = $num1 * $num2;
+                        echo "Result: $result";
+                        break;
+                    case "divide":
+                        if ($num2 != 0) {
+                            $result = $num1 / $num2;
+                            echo "Result: $result";
+                        } else {
+                            echo "Cannot divide by zero.";
+                        }
+                        break;
+                    case "binary":
+                        echo "Binary: " . decbin($num1);
+                        break;
+                    case "octal":
+                        echo "Octal: " . decoct($num1);
+                        break;
+                    case "hexadecimal":
+                        echo "Hexadecimal: " . dechex($num1);
+                        break;
+                }
+            
+                echo " </div>";
+
+            }
+            ?>
+                    
+                    </div>
+                </div>
+				<div class="col-md-4"></div>
+            </div>
+        </div>
+<footer id="footer">
+	<div class="container footer">
+		<div class="row">
+			<div class="col-md-12 text-center">
+			
+			<a href="../../index.php">Home</a>
+			
+			</div>
+		</div>
+	</div>
+</footer>		
+
+<script src="../../jquery-ui/external/jquery/jquery.js"></script>
+<script src="../../jquery-ui/jquery-ui.js"></script>
 
 </body>
 </html>
