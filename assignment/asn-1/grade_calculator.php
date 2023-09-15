@@ -109,6 +109,29 @@
                      
                         $average=number_format((float)$total/3, 2, '.', '');
                         $gpa=number_format((float)$totalPoint/3, 2, '.', '');
+                        $grade="";
+                        // Letter Grade Evaluaton on Average
+
+                        if($average>=80){ 
+                            $grade = "A"; 
+                          
+                        }
+                        else if($average>=70 && $average<80){ 
+                            $grade  = "B"; 
+                            
+                        }
+                        else if($average>=60 && $average <70){ 
+                            $grade  = "C"; 
+                            
+                        }
+                        else if($average>=50 && $average <60){ 
+                            $grade  = "D"; 
+                           
+                        }
+                        else {
+                            $grade  = "F"; 
+                           
+                        }
 
                         $gradeSheet = <<<GRADESHEET
                     <div class="table-responsive">
@@ -129,14 +152,16 @@
                              <td colspan="3"> Web Development with PHP & Laravel</td>
                           </tr>
                           <tr>
-                             <td>Result</td>
+                             <td>Result :</td>
                              <td>GPA = $gpa </td>
                              <td>Average</td>
                              <td>$average</td>
                           </tr>
                           <tr>
+                             <td>Grade :</td>
+                             <td> $grade </td>
                              <td>Total Marks</td>
-                             <td colspan="3"><span id="i_name">$total</span></td>
+                             <td><span id="i_name">$total</span></td>
                           </tr>
                        </tbody>
                     </table>
