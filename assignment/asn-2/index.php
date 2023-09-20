@@ -80,10 +80,42 @@ for($x;$x<=$y; $x++){
 Task 3: Break on Condition
 Write a PHP program that calculates and prints the first 10 Fibonacci numbers. But, if a
 Fibonacci number is greater than 100, break out of the loop using the break statement. */
-
-
+echo "<h1>Task 3:</h1>";
+echo "Break on Condition in 10 Fibonacci numbers :<br>";
+$count = 10;  
+$num1=1; 
+$num2=0; 
+for($i=0;$i<$count;$i++){
+echo " $num2 ".PHP_EOL;
+$temp=$num1+$num2;  
+$num1=$num2;  
+$num2=$temp; 
+if($num2>100){
+    break;
+}	
+}
 
 /* Task 4: Fibonacci Series printing using a Function
 Write a PHP function to print the first 15 numbers in the Fibonacci series. You should take
 this 15 as an argument of a function and use a for loop to generate these numbers and print
 them by calling the function. */
+
+echo "<h1>Task 4:</h1>";
+echo "Fibonacci Series printing up to 15 Number using a Function :<br>";
+
+$num = 15;  
+function fiboSeries($num){  
+    if($num == 0){  
+    return 0;  
+    }else if( $num == 1){  
+return 1;  
+}  else {  
+return (fiboSeries($num-1) + fiboSeries($num-2));  
+}   
+}  
+
+/* Call Function. */  
+for ($i = 0; $i <$num; $i++){  
+echo fiboSeries($i);  
+echo " ";  
+}  
