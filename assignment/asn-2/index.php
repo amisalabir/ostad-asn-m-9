@@ -6,7 +6,7 @@ should take the arguments like start as 1, end as 20 and step as 2. You must cal
 function to print.
 Also do the same using while loop and do-while loop also. */
 
-echo "Task 1: <br>";
+echo "<h1>Task 1:</h1>";
 echo "Finding Even Number using function & for loop :<br>"; 
 $x=1; $y=20;
 function evenNumberFor($x,$y){
@@ -63,12 +63,17 @@ Create a PHP script that prints numbers from 1 to 50 using a for loop. However, 
 loop encounters a multiple of 5, it should skip that number using the continue statement and
 continue to the next iteration.
  */
-echo "Task 2: <br>";
+echo "<h1>Task 2:</h1>";
 echo "Skipping multiples of 5 in loop from given range :<br>"; 
 $x=1; $y=50;
 
 for($x;$x<=$y; $x++){
-    echo "$x <br>";
+
+    if($x%5==0){
+        continue;
+    }
+    echo "$x \n";
+
 }
 
 /* 
