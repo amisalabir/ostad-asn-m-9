@@ -129,7 +129,7 @@
                             <li><a class="dropdown-item"  href="assignment/asn-1/simple_calculator.php">Task-7: Simple Calculator</a></li>
                         </ul>
                   </li>
-                  <li><a href="#tabs-1">Assignment - 2 :PHP Fundamentals Assignment</a></li>
+                  <li><a href="assignment/asn-2/index.php">Assignment - 2 : Mastering PHP loop & Function</a></li>
                 </ul>
             </div>
             <div id="tabs-6" class="detailsTab">
