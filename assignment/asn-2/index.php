@@ -101,7 +101,7 @@ this 15 as an argument of a function and use a for loop to generate these number
 them by calling the function. */
 
 echo "<h1>Task 4:</h1>";
-echo "Fibonacci Series printing up to 15 Number using a Function :<br>";
+echo "Fibonacci Series printing up to 15 Number using a Function :<br>".PHP_EOL;
 
 $num = 15;  
 function fiboSeries($num){  
