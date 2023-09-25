@@ -1,8 +1,9 @@
-Indexed Arrays
+<?php
+// Indexed Arrays
 
-You can create an indexed array using the array() function or the short array syntax [].
+// You can create an indexed array using the array() function or the short array syntax [].
 
-// How to create
+//How to create
 $array1 = array("apple", "banana", "cherry");
 $array2 = ["apple", "banana", "cherry"];
 
@@ -21,14 +22,13 @@ foreach ($array1 as $value) {
     echo $value . "<br>";
 }
 
+#=======================================
 
-=======================================
 
-
-Associative arrays:
+/* Associative arrays:
 
 Associative arrays in PHP are arrays that use named keys instead of numeric indexes. This makes them more expressive and useful when dealing with key-value pairs.
-Associative arrays can be defined using the array() function or the short array syntax [].
+Associative arrays can be defined using the array() function or the short array syntax []. */
 
 // How to create
 $person1 = array("first_name" => "John", "last_name" => "Doe");
@@ -44,11 +44,11 @@ foreach ($person1 as $key => $value) {
 }
 
 
-=======================================
+#=======================================
 
-Multidimensional arrays
+/* Multidimensional arrays
 Multidimensional arrays are arrays that contain other arrays as their elements. The contained arrays can be indexed or associative
-
+ */
 
 //Declaring a Multidimensional Array
 $array = array(
@@ -84,10 +84,10 @@ foreach($users as $username => $details) {
     }
 }
 
-=======================================
+#=======================================
 
 
-Array Creation and Manipulation Functions
+//Array Creation and Manipulation Functions
 
 # array() - Creates an array.
 $fruits = array("apple", "banana", "cherry");
@@ -146,12 +146,12 @@ $fruits = array("apple", "banana", "cherry");
 $portion = array_slice($fruits, 1, 2);
 
 
-==========================================
-Array Information Functions
+#==========================================
+//Array Information Functions
 
 #count() - Counts the number of elements in an array.
 $numbers = array(1, 2, 3, 4, 5);
-echo count($numbers)
+echo count($numbers);
 
 #sizeof() - An alias of count(). Also counts the number of elements in an array.
 $numbers = array(1, 2, 3, 4, 5);
@@ -189,8 +189,8 @@ $assoc = array("first" => "apple", "second" => "banana");
 $key = array_search("banana", $assoc);
 echo $key;
 
-=============================================
-Array Transformation Functions
+#=============================================
+//Array Transformation Functions
 
 #array_map() - Applies a callback function to the elements of one or more arrays.
 function square($n) {
@@ -251,11 +251,11 @@ $records = array(
 $firstNames = array_column($records, 'first_name');
 print_r($firstNames);
 
-==============================================
+#==============================================
 
 
 
-Array Sorting Functions
+//Array Sorting Functions
 
 
 #sort() - Sorts an array in ascending order.
@@ -324,10 +324,10 @@ print_r($files);
 #uasort() - Sorts an array with a user-defined comparison function and maintains index association.
 
 $people = array( "Peter" => 35, "Jack" => 32,  "Mary" => 28);
-function ageComparator($a, $b) {
+function ageComparatorOne($a, $b) {
     return $a - $b;
 }
-uasort($people , 'ageComparator');
+uasort($people , 'ageComparatorOne');
 print_r($people);
 
 
@@ -338,17 +338,17 @@ print_r($people);
 #uksort() - Sorts an array by keys using a user-defined comparison function.
 
 $people = array( "Peter" => 35, "Jack" => 32,  "Mary" => 28);
-function ageComparator($a, $b) {
-    return $a <=> $b;
+function ageComparator($a,$b){
+    return $a <> $b;
 }
 uksort($people , 'ageComparator');
 print_r($people);
 
 
 
-=====================================
+#=====================================
 
-Array Iteration Functions
+//Array Iteration Functions
 
 #array_walk() - Applies a user-defined function to each item in an array.
 
@@ -388,16 +388,16 @@ function sum($carry, $item) {
 $result = array_reduce($numbers, 'sum');
 echo $result;  // Outputs: 15
 
-========================================================
+#========================================================
 
 
 
-Multidimensional Arrays Functions
+//Multidimensional Arrays Functions
 
 
 
 
-array_multisort():This function can be used to sort multiple arrays at once or a multi-dimensional array by one or more dimensions.
+/* array_multisort():This function can be used to sort multiple arrays at once or a multi-dimensional array by one or more dimensions. */
 
 
 $names = ["Tina", "Bob", "Alice"];
@@ -409,7 +409,7 @@ print_r($ages);
 
 
 
-array_column():This function returns the values from a single column in the input array.
+//array_column():This function returns the values from a single column in the input array.
 $users = [
     ['id' => 1, 'name' => 'Alice', 'email' => 'alice@example.com'],
     ['id' => 2, 'name' => 'Bob', 'email' => 'bob@example.com'],
@@ -420,7 +420,7 @@ print_r($names);
 
 
 
-array_map():This function applies a callback to the elements of the given arrays and returns an array containing all the elements after applying the callback function.
+/* array_map():This function applies a callback to the elements of the given arrays and returns an array containing all the elements after applying the callback function. */
 
 $numbers = [1, 2, 3, 4, 5];
 
@@ -432,23 +432,23 @@ print_r($squaredNumbers);
 
 
 
-========================================================
+#========================================================
 
 
-Array Mathematics Function
+//Array Mathematics Function
 
 
 
-array_diff():
-Computes the difference of arrays. It compares the values of the first array with the values of following arrays and returns the differences.
+/* array_diff():
+Computes the difference of arrays. It compares the values of the first array with the values of following arrays and returns the differences. */
 $array1 = ["a", "b", "c", "d"];
 $array2 = ["b", "c"];
 $result = array_diff($array1, $array2);
 print_r($result);
 
 
-array_diff_assoc():
-Computes the difference of arrays with additional index check.
+array_diff_assoc($array1, $array2);
+//Computes the difference of arrays with additional index check.
 
 $array1 = ["a" => "green", "b" => "brown", "c" => "blue", "red"];
 $array2 = ["a" => "green"];
@@ -456,8 +456,8 @@ $result = array_diff_assoc($array1, $array2);
 print_r($result);
 
 
-array_diff_key():
-Computes the difference of arrays using keys for comparison.
+array_diff_key($array1, $array2);
+//Computes the difference of arrays using keys for comparison.
 
 $array1 = ["blue" => 1, "red" => 2, "green" => 3];
 $array2 = ["green" => 4, "yellow" => 7];
@@ -466,8 +466,8 @@ print_r($result);
 
 
 
-array_intersect():
-Computes the intersection of arrays.
+array_intersect($array1, $array2);
+//Computes the intersection of arrays.
 
 $array1 = ["a", "b", "c", "d"];
 $array2 = ["b", "c", "e"];
@@ -476,8 +476,8 @@ print_r($result);
 
 
 
-array_intersect_assoc():
-Computes the intersection of arrays with additional index check.
+array_intersect_assoc($array1, $array2);
+//Computes the intersection of arrays with additional index check.
 
 
 $array1 = ["a" => "green", "b" => "brown", "c" => "blue"];
@@ -486,8 +486,8 @@ $result = array_intersect_assoc($array1, $array2);
 print_r($result);
 
 
-array_intersect_key():
-Computes the intersection of arrays using keys for comparison.
+array_intersect_key($array1, $array2);
+//Computes the intersection of arrays using keys for comparison.
 
 $array1 = ["blue" => 1, "red" => 2, "green" => 3];
 $array2 = ["green" => 4, "yellow" => 7];
@@ -496,10 +496,10 @@ print_r($result);
 
 
 
-===============================
+#===============================
 
 
-Array Utility Functions
+//Array Utility Functions
 
 
 #array_unique(): Removes duplicate values from an array.
@@ -553,9 +553,9 @@ print_r($evenNumbers);
 
 
 
-===============================
+#===============================
 
-Other Functions
+//Other Functions
 
 
 #compact(): Creates an array containing variables and their values.
