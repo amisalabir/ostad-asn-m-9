@@ -1,13 +1,13 @@
 <?php
 //Task 1: Variable
 echo "Task 1: Variable: Age = ";
-$age=37;
+$age = 37;
 echo $age;
 echo "<br>";
 
 //Task 2: Constant
 echo "Task 2: Constant(PI): ";
-define("PI",3.14159);
+define("PI", 3.14159);
 echo PI;
 echo "<br>";
 
@@ -20,17 +20,16 @@ echo "<br>";
 
 //Task 4: Arithmetic Operations
 echo "Task 4: Arithmetic Operations: Calculation of [((20 + 5) * 3) / 4)]: ";
-$result=((20 + 5) * 3) / 4;
+$result = ((20 + 5) * 3) / 4;
 echo $result;
 echo "<br>";
 
 //Task 5: Conditional Operators
 echo "Task 5: Conditional Operators (Assigned Numeber 75): ";
-$marks=75;
-if($marks>=60 && $marks<=80){
+$marks = 75;
+if ($marks >= 60 && $marks <= 80) {
     echo "Passed";
-}
-else{
+} else {
     echo "Failed";
 }
 ?>
