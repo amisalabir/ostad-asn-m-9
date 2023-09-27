@@ -46,20 +46,20 @@ function calculateGradesAverage( $studentGrades ) {
                     $subjectGpa=null;
                     $subjectLetterGrade="";
                     if($number>=80){ 
-                        $subjectLetterGrade="A "; 
+                        $subjectLetterGrade="A"; 
                         $subjectGpa=4.00;
                     }
-                    else if($average>=70 && $average<80){ 
+                    else if($number>=70 && $number<80){ 
                         $subjectLetterGrade="A-"; 
                         $subjectGpa=3.50;
                         
                     }
-                    else if($average>=60 && $average <70){ 
+                    else if($number>=60 && $number <70){ 
                         $subjectLetterGrade="B+"; 
                         $subjectGpa=3.25;
                         
                     }
-                    else if($average>=50 && $average <60){ 
+                    else if($number>=50 && $number <60){ 
                         $subjectLetterGrade="B"; 
                         $subjectGpa=3.00;
                     
