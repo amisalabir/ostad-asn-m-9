@@ -72,7 +72,7 @@
 
             <div class="col-md-6">
                 <p class="text-center text-success">
-                    <?php echo isset($_COOKIE['successMsg']) ? $_COOKIE['successMsg'] : '';?>
+                   
                 </p>
                 <div class="card">
                     <div class="card-header">Login</div>

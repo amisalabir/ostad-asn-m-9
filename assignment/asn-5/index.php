@@ -18,9 +18,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">WELCOME <?php echo strtoupper($_SESSION['role']); ?></a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+    <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+        <a class="navbar-brand" href="index.php">RBAC System (Crew Project) : </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +34,7 @@
                     if($_SESSION['role'] == 'admin'){
                 ?>
                 <li class="nav-item active">
-                    <a class="nav-link" href="roles.php">Role Management <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="roles.php"> Admin  <span class="sr-only">(current)</span></a>
                 </li>
                 <?php
                     }
@@ -51,7 +54,7 @@
         </div>
     </div>
 
-    <h2>Users List</h2>
+    <h2> Profile :</h2>
     <table class="table">
         
         <thead>
@@ -59,6 +62,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -78,13 +82,17 @@
                 <th scope="row"><?php echo $count;?></th>
                 <td><?php echo $username;?></td>
                 <td><?php echo $userEmail;?></td>
+               
             </tr>
             <?php
                 }
             ?>
         </tbody>
     </table>
-        
+    </div>
+        <div class="col-md-1"></div>
+    </div>
+   </div>         
     <!-- Add Bootstrap JS and Popper.js if needed -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>

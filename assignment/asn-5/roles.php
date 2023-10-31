@@ -46,7 +46,7 @@
         {
             $previousEmail = trim($data[3]);
             if($previousEmail == $email){
-                setcookie("errorMsg", "Email already exists! Please try with another", time() + 5);
+                setcookie("errorMsg", "Email exists! Please another", time() + 5);
                 header("Location: roles.php");
                 return;
             }
@@ -68,14 +68,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Role Management</title>
+    <title>RBACK</title>
     <!-- Add Bootstrap CSS link -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">Welcome <?php echo strtoupper($_SESSION['username']); ?></a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10"> 
+    <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+     <a class="navbar-brand" href="index.php"> RBAC System &nbsp; User Profle </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -86,7 +89,7 @@
                     if($_SESSION['role'] == 'admin'){
                 ?>
                 <li class="nav-item active">
-                    <a class="nav-link" href="roles.php">Role Management <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="roles.php"> <span class="sr-only">(current)</span></a>
                 </li>
                 <?php
                     }
@@ -105,7 +108,7 @@
     </div>
     
     <p class="text-center text-success">
-        <?php echo isset($_COOKIE['successMsg']) ? $_COOKIE['successMsg'] : '';?>
+        
     </p>
     <p class="text-center text-danger">
         <?php echo isset($_COOKIE['errorMsg']) ? $_COOKIE['errorMsg'] : '';?>
@@ -142,7 +145,7 @@
                 <td><?php echo $userEmail;?></td>
                 <td><?php echo $role;?></td>
                 <td>
-                    <a href="edit.php?id=<?php echo $sl; ?>" class="btn btn-warning">Edit</a>
+                    <a href="edit.php?id=<?php echo $sl; ?>" class="btn btn-primary">Edit</a>
                     <a href="delete.php?id=<?php echo $sl; ?>" class="btn btn-danger" onClick="return confirm('Are you sure?')">Delete</a>
                 </td>
             </tr>
@@ -183,7 +186,10 @@
             </div>
         </div>
     </div>
-
+    </div>
+        <div class="col-md-1"></div>
+    </div>
+   </div> 
         
     <!-- Add Bootstrap JS and Popper.js if needed -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

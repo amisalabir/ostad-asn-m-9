@@ -47,7 +47,7 @@
         $sl = count($database);
         $database[] = array($sl,$role, $username, $email, $password);
         $new_data = json_encode($database);
-        file_put_contents($file, PHP_EOL .$new_data,LOCK_EX);
+        file_put_contents($file, $new_data,LOCK_EX);
         setcookie("successMsg", "Registration Successful! Login Now", time() + 5);
         header("Location: login.php");
     }

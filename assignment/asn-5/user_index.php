@@ -18,9 +18,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">WELCOME <?php echo strtoupper($_SESSION['role']); ?></a>
+   <div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+        <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+        <a class="navbar-brand" href="#">RBAC System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,7 +46,7 @@
         </div>
     </div>
 
-    <h2>Users List</h2>
+    <h2> List</h2>
     <table class="table">
         
         <thead>
@@ -51,6 +54,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
+               
             </tr>
         </thead>
         <tbody>
@@ -70,12 +74,18 @@
                 <th scope="row"><?php echo $count;?></th>
                 <td><?php echo $username;?></td>
                 <td><?php echo $userEmail;?></td>
+                
             </tr>
             <?php
                 }
             ?>
         </tbody>
     </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+   </div> 
+    
         
     <!-- Add Bootstrap JS and Popper.js if needed -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
