@@ -1,2 +1,2 @@
 # ostad-wdpl
-ostad.meyazi.com
+Profile URL:ostad.meyazi.com
